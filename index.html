@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <!-- ════════════════════════════════════════════════
+       META BASE
+  ═══════════════════════════════════════════════════ -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- SEO dinámico — inyectado por config-injector.js -->
+
+  <!-- ════════════════════════════════════════════════
+       CSS CRÍTICO INLINE (above-the-fold)
+  ═══════════════════════════════════════════════════ -->
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{overflow-x:hidden;-webkit-text-size-adjust:100%}
+    body{
+      background:#F6F1EF;
+      color:#2F2A28;
+      font-family:'Montserrat',system-ui,sans-serif;
+      -webkit-font-smoothing:antialiased;
+      overflow-x:hidden;
+      min-height:100vh;
+    }
+    #navbar{
+      position:fixed;top:0;left:0;right:0;
+      height:72px;z-index:300;
+      background:transparent;
+      display:flex;align-items:center;
+    }
+    .navbar-inner{
+      width:100%;max-width:1200px;
+      margin-inline:auto;padding-inline:1.25rem;
+      display:grid;grid-template-columns:1fr auto 1fr;
+      align-items:center;gap:1.5rem;
+    }
+    #hero{
+      position:relative;
+      min-height:100svh;
+      overflow:hidden;
+      background:#2F2A28;
+    }
+    .hero-slider{
+      position:absolute;inset:0;
+      display:flex;
+    }
+    #whatsapp-float{opacity:0;transition:opacity .4s}
+    .container{width:100%;max-width:1200px;margin-inline:auto;padding-inline:1.25rem}
+    ul,ol{list-style:none}
+  </style>
+
+  <!-- ════════════════════════════════════════════════
+       FUENTES — Cormorant Garamond + Montserrat
+  ═══════════════════════════════════════════════════ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@400;500;600;700&display=swap"
+    media="print"
+    onload="this.media='all'"
+  >
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@400;500;600;700&display=swap">
+  </noscript>
+
+  <!-- ════════════════════════════════════════════════
+       CSS — orden correcto para cascade
+  ═══════════════════════════════════════════════════ -->
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/sections.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+  <link rel="icon" type="image/png"     href="assets/img/favicon.png">
+  <link rel="apple-touch-icon"          href="assets/img/apple-touch-icon.png">
+  <meta name="theme-color" content="#F6F1EF">
+
+</head>
+
+<body>
+
+  <!-- ================================ COMPONENT: NAVBAR ================================ -->
+  <header id="navbar" role="banner" aria-label="Navegación principal">
+    <div class="navbar-inner">
+
+      <!-- Logo (izquierda) -->
+      <a href="#" class="navbar-logo" aria-label="Ir al inicio">
+        <!-- Inyectado por JS: brand.name -->
+      </a>
+
+      <!-- Nav central (desktop) -->
+      <nav class="navbar-nav" role="navigation" aria-label="Menú principal">
+        <!-- Generado por JS desde navbar.links -->
+      </nav>
+
+      <!-- Acciones (derecha) -->
+      <div class="navbar-actions">
+        <a href="#" class="navbar-wa-icon" id="navbar-wa" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18" aria-hidden="true">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.528 5.845L0 24l6.335-1.652A11.94 11.94 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/>
+          </svg>
+        </a>
+        <div class="navbar-divider" aria-hidden="true"></div>
+        <a href="#coleccion" class="btn btn-primary btn-sm navbar-cta">
+          <!-- Inyectado por JS -->
+        </a>
+        <button class="navbar-burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="navbar-modal">
+          <span class="navbar-burger-bar"></span>
+          <span class="navbar-burger-bar"></span>
+          <span class="navbar-burger-bar"></span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ================================ COMPONENT: NAVBAR MODAL (mobile) ================================ -->
+  <div id="navbar-modal" class="navbar-modal" role="navigation" aria-label="Menú móvil" aria-hidden="true">
+    <div class="navbar-modal-links">
+      <!-- Generado por JS desde navbar.links -->
+    </div>
+    <div class="navbar-modal-footer">
+      <a href="#coleccion" class="navbar-modal-cta">
+        <!-- Inyectado por JS -->
+      </a>
+      <div class="navbar-modal-icons">
+        <a href="#" id="modal-email-link" class="navbar-modal-icon" aria-label="Email">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="20" height="20" aria-hidden="true">
+            <rect x="2" y="4" width="20" height="16" rx="2"/>
+            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+          </svg>
+        </a>
+        <a href="#" id="modal-wa-link" class="navbar-modal-icon" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20" aria-hidden="true">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.528 5.845L0 24l6.335-1.652A11.94 11.94 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <main id="main-content">
+
+    <!-- ================================ SECTION: HERO ================================ -->
+    <section id="hero" role="region" aria-label="Presentación de Bella Glam" aria-roledescription="Carrusel de imágenes">
+      <div class="hero-slider" aria-live="polite" aria-atomic="false">
+        <!-- Slides generados por JS desde hero.slides -->
+      </div>
+
+    </section>
+
+
+    <!-- ================================ SECTION: BRAND VALUES / ESENCIA ================================ -->
+    <section id="values" role="region" aria-labelledby="values-title">
+      <div class="container">
+        <header class="section-header" data-reveal="up">
+          <span class="eyebrow">Nuestra Filosofía</span>
+          <h2 id="values-title"><!-- Inyectado por JS --></h2>
+          <div class="accent-line" aria-hidden="true"></div>
+          <p id="values-subtitle"><!-- Inyectado por JS --></p>
+        </header>
+        <div class="values-grid">
+          <!-- Cards generadas por JS desde values.items -->
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ================================ SECTION: COLECCIÓN CON TABS ================================ -->
+    <section id="coleccion" role="region" aria-labelledby="collection-title">
+      <div class="container">
+        <header class="section-header" data-reveal="up">
+          <span class="eyebrow">Productos Seleccionados</span>
+          <h2 id="collection-title"><!-- Inyectado por JS --></h2>
+          <div class="accent-line" aria-hidden="true"></div>
+          <p id="collection-subtitle"><!-- Inyectado por JS --></p>
+        </header>
+        <!-- Tabs + Grid generados por JS desde portfolio -->
+        <div id="collection-container">
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ================================ SECTION: GALERÍA ================================ -->
+    <section id="galeria" role="region" aria-labelledby="gallery-title">
+      <div class="container">
+        <header class="section-header" data-reveal="up">
+          <span class="eyebrow">Inspiración</span>
+          <h2 id="gallery-title"><!-- Inyectado por JS --></h2>
+          <div class="accent-line" aria-hidden="true"></div>
+          <p id="gallery-subtitle"><!-- Inyectado por JS --></p>
+        </header>
+      </div>
+      <div class="gallery-track-wrapper" aria-label="Galería de imágenes inspiracionales">
+        <div class="gallery-track" role="list">
+          <!-- Imágenes generadas por JS desde gallery.images -->
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ================================ SECTION: FAQ ================================ -->
+    <section id="faq" role="region" aria-labelledby="faq-title">
+      <div class="container">
+        <header class="section-header" data-reveal="up">
+          <span class="eyebrow">Resolvemos tus dudas</span>
+          <h2 id="faq-title"><!-- Inyectado por JS --></h2>
+          <div class="accent-line" aria-hidden="true"></div>
+          <p id="faq-subtitle"><!-- Inyectado por JS --></p>
+        </header>
+        <div class="faq-list" role="list">
+          <!-- Acordeón generado por JS desde faq.items -->
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ================================ SECTION: CTA FINAL ================================ -->
+    <section id="cta-final" role="region" aria-labelledby="cta-title">
+      <div class="container">
+        <div class="cta-final-inner" data-reveal="zoom">
+          <span class="eyebrow">Comenzá hoy</span>
+          <h2 id="cta-title"><!-- Inyectado por JS --></h2>
+          <div class="accent-line" aria-hidden="true"></div>
+          <p id="cta-subtitle"><!-- Inyectado por JS --></p>
+          <button id="cta-btn" class="btn btn-primary btn-lg">
+            <!-- Inyectado por JS -->
+          </button>
+          <p class="cta-social-proof" id="cta-social-proof">
+            <!-- Inyectado por JS -->
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ================================ FOOTER ================================ -->
+  <footer id="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="footer-logo"><!-- Inyectado por JS --></a>
+          <p class="footer-tagline"><!-- Inyectado por JS --></p>
+          <div class="footer-social" aria-label="Redes sociales">
+            <!-- Generado por JS desde brand.social -->
+          </div>
+        </div>
+        <div>
+          <p class="footer-nav-title">Secciones</p>
+          <nav class="footer-nav" aria-label="Navegación del footer">
+            <!-- Generado por JS desde footer.links -->
+          </nav>
+        </div>
+        <div>
+          <p class="footer-nav-title">Contacto</p>
+          <nav class="footer-nav" aria-label="Contacto">
+            <a href="#" id="footer-wa-link">💬 WhatsApp</a>
+            <a href="#faq">📋 Preguntas frecuentes</a>
+          </nav>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copyright">
+          <!-- Generado por JS -->
+        </p>
+        <p style="font-size:0.7rem;color:rgba(246,241,239,0.2);">
+          Diseñado con ❤️ para marcas con brillo propio
+        </p>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- ================================ COMPONENT: WHATSAPP FLOTANTE ================================ -->
+  <div id="whatsapp-float" role="complementary" aria-label="Contacto por WhatsApp">
+    <!-- Generado por JS -->
+  </div>
+
+
+  <!-- ════════════════════════════════════════════════
+       SCRIPTS — defer para no bloquear render
+       ORDEN IMPORTANTE:
+       1. site-config.js  → define SITE_CONFIG
+       2. Módulos JS      → dependen de SITE_CONFIG
+       3. main.js         → entry point
+  ═══════════════════════════════════════════════════ -->
+  <script src="config/site-config.js" defer></script>
+  <script src="assets/js/config-injector.js" defer></script>
+  <script src="assets/js/navbar.js"          defer></script>
+  <script src="assets/js/scroll-reveal.js"   defer></script>
+  <script src="assets/js/carousel.js"        defer></script>
+  <script src="assets/js/faq.js"             defer></script>
+  <script src="assets/js/main.js"            defer></script>
+
+  <!-- Footer WhatsApp link -->
+  <script>
+    document.addEventListener('configInjected', function() {
+      var el = document.getElementById('footer-wa-link');
+      if (el && typeof SITE_CONFIG !== 'undefined') {
+        var msg = encodeURIComponent(SITE_CONFIG.brand.whatsappMessage);
+        el.href = 'https://wa.me/' + SITE_CONFIG.brand.whatsapp + '?text=' + msg;
+        el.target = '_blank';
+        el.rel = 'noopener noreferrer';
+      }
+    });
+  </script>
+
+</body>
+</html>
