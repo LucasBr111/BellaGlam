@@ -45,9 +45,9 @@
     // Fase 3: Diferido (no bloquea interactividad)
     // Usamos setTimeout para darle prioridad al LCP y TTI
     setTimeout(() => {
-      Counter.init();
+ /*      Counter.init(); */
       FAQ.init();
-      WhatsApp.init();
+  /*     WhatsApp.init(); */
     }, 0);
   }
 

@@ -20,6 +20,7 @@ const FAQ = (() => {
   }
 
   function setup() {
+    console.log('[FAQ] Configurando acordeón de preguntas frecuentes');
     const list = document.querySelector('.faq-list');
     if (!list) return;
 

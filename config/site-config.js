@@ -73,12 +73,12 @@ const SITE_CONFIG = {
     blurOnScroll: true,
     links: [
       { label: "Colección", href: "#coleccion" },
-      { label: "Esencia", href: "#esencia" },
+      { label: "Esencia", href: "#values" },
       { label: "Galería", href: "#galeria" },
       { label: "Preguntas", href: "#faq" },
-      { label: "Contacto", href: "#contacto" }
+      { label: "Contacto", href: "#cta-final" }
     ],
-    ctaLabel: "Explorar Ahora"
+    ctaLabel: "Ver más",
   },
 
   /* ─────────────────────────────────────────────
@@ -95,7 +95,7 @@ const SITE_CONFIG = {
         title: "La belleza no se aplica. Se despierta.",
         subtitle: "Descubrí una colección pensada para mujeres que aman la naturalidad sofisticada y el brillo auténtico.",
         primaryCTA: { label: "Ver Colección", href: "#coleccion" },
-        secondaryCTA: { label: "Nuestra Esencia", href: "#esencia" },
+        secondaryCTA: { label: "Nuestra Esencia", href: "#values" },
         microcopy: "Cruelty Free • Pago Seguro • Envíos a todo Paraguay"
       }
     ]
@@ -106,22 +106,22 @@ const SITE_CONFIG = {
    * ───────────────────────────────────────────── */
   values: {
     title: "Nuestra Esencia",
-    subtitle: "Creemos en una belleza elegante, consciente y accesible.",
+    subtitle: "En Bella Glam, seleccionamos lo mejor del maquillaje global para ofrecerte una experiencia de belleza elegante, consciente y diseñada para resaltar tu autenticidad.",
     items: [
       {
         icon: "sparkle",
-        title: "Elegancia Natural",
-        description: "Productos diseñados para resaltar tu belleza sin excesos."
+        title: "Curaduría Exclusiva",
+        description: "No solo vendemos maquillaje; elegimos cuidadosamente cada producto para garantizar que resalte tu elegancia natural con resultados profesionales."
       },
       {
         icon: "leaf",
-        title: "Belleza Consciente",
-        description: "Comprometidos con prácticas libres de crueldad animal."
+        title: "Compromiso Ético",
+        description: "Priorizamos marcas que comparten nuestra visión de belleza libre de crueldad, para que cuides de ti misma mientras cuidas el entorno."
       },
       {
         icon: "shield",
-        title: "Confianza Real",
-        description: "Pagos protegidos y envíos seguros a todo el país."
+        title: "Cercanía y Garantía",
+        description: "Somos una tienda real para personas reales. Te acompañamos en tu compra con asesoría personalizada, envíos seguros y total transparencia."
       }
     ]
   },
@@ -208,13 +208,21 @@ const SITE_CONFIG = {
         answer: "Sí. Trabajamos con transportadoras confiables para asegurar entregas rápidas y seguras."
       },
       {
-        question: "¿Son productos cruelty free?",
-        answer: "Sí. Creemos en una belleza consciente y libre de maltrato animal."
+        question: "¿Cuánto tarda en llegar mi pedido?",
+        answer: "Los envíos dentro de Ciudad del Este suelen ser en el día. Para el resto de Paraguay, el tiempo estimado es de 24 a 48 horas hábiles, dependiendo de tu ubicación."
+      },
+      {
+        question: "¿Puedo cambiar un producto si me llegó dañado?",
+        answer: "¡Claro que sí! Si algún producto llega con fallas de origen o daños por el transporte, tienes un plazo de 24hs tras recibirlo para contactarnos y gestionaremos el cambio sin costo adicional."
       },
       {
         question: "¿Qué métodos de pago aceptan?",
         answer: "Transferencias bancarias y pagos con tarjeta mediante plataforma segura."
-      }
+      },
+      {
+        question: "¿Tienen tienda física para probar los productos?",
+        answer: "Por el momento somos una tienda 100% online, lo que nos permite mantener precios más competitivos. Sin embargo, enviamos fotos y videos reales de los productos por WhatsApp para que los veas en detalle antes de comprar."
+      },
     ]
   },
 
@@ -235,11 +243,11 @@ const SITE_CONFIG = {
     tagline: "Sutil. Radiante. Tú.",
     links: [
       { label: "Colección", href: "#coleccion" },
-      { label: "Esencia", href: "#esencia" },
+      { label: "Esencia", href: "#values" },
       { label: "Galería", href: "#galeria" },
       { label: "Preguntas", href: "#faq" }
     ],
-    legal: "© 2024 Bella Glam — Ciudad del Este, Paraguay. Todos los derechos reservados."
+    legal: "© 2026 Bella Glam — Ciudad del Este, Paraguay. Todos los derechos reservados."
   }
 
 };
