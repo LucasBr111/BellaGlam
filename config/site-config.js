@@ -80,32 +80,31 @@ const SITE_CONFIG = {
     subtitle: "Seleccionamos con cuidado cada fórmula para que tu ritual diario sea un momento de elegancia pura.",
     cta: { label: "Conocé la colección", href: "#coleccion" }
   },
+/* ── SPLIT FEATURE (nueva sección) ── */
+splitFeature: {
+  eyebrow: "Selección Premium",
+  title:   "Lo mejor,\npara que brilles siempre.",
+  points: [
+    { icon: "✦", text: "Marcas reconocidas y productos originales" },
+    { icon: "✦", text: "Selección cuidadosa según calidad y tendencia" },
+    { icon: "✦", text: "Envíos rápidos a todo Paraguay" },
+    { icon: "✦", text: "Asesoramiento personalizado por WhatsApp" }
+  ],
+  image:    "assets/img/gallery-1.jfif",
+  imageAlt: "Productos de maquillaje seleccionados"
+},
 
-  /* ── SPLIT FEATURE (nueva sección) ── */
-  splitFeature: {
-    eyebrow: "Compromiso Real",
-    title:   "Hecho para vos,\npensado para durar.",
-    points: [
-      { icon: "✦", text: "Fórmulas libres de crueldad animal" },
-      { icon: "✦", text: "Pigmentación profesional al alcance de todas" },
-      { icon: "✦", text: "Envíos rápidos a todo Paraguay" },
-      { icon: "✦", text: "Asesoramiento personalizado por WhatsApp" }
-    ],
-    image:    "assets/img/gallery-1.jfif",
-    imageAlt: "Detalle de producto Bella Glam"
-  },
-
-  /* ── BRAND STRIP (nueva sección) ── */
-  brandStrip: {
-    items: [
-      "Cruelty Free",
-      "Pago Seguro",
-      "Envíos Express",
-      "Asesoría Personalizada",
-      "Calidad Garantizada",
-      "Hecho con Amor"
-    ]
-  },
+/* ── BRAND STRIP (nueva sección) ── */
+brandStrip: {
+  items: [
+    "Productos Originales",
+    "Pago Seguro",
+    "Envíos Express",
+    "Asesoría Personalizada",
+    "Tendencias Actualizadas",
+    "Calidad Garantizada"
+  ]
+},
 
   values: {
     title:    "Nuestra Esencia",
