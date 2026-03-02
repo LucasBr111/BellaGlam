@@ -1296,3 +1296,285 @@
     gap: var(--space-6);
   }
 }
+
+/* ════════════════════════════════════════════════════
+   SECTION: PARALLAX BANNER
+   ════════════════════════════════════════════════════ */
+
+#parallax-banner {
+  position: relative;
+  min-height: 65vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-attachment: fixed;       /* Efecto parallax en desktop */
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+/* Overlay degradado para legibilidad */
+#parallax-banner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(47, 42, 40, 0.72) 0%,
+    rgba(143, 47, 74, 0.45) 50%,
+    rgba(47, 42, 40, 0.65) 100%
+  );
+  z-index: 1;
+}
+
+/* Textura de puntos decorativa */
+#parallax-banner::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, rgba(246, 241, 239, 0.05) 1px, transparent 1px);
+  background-size: 24px 24px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Corte diagonal inferior */
+#parallax-banner .parallax-clip {
+  position: absolute;
+  bottom: -2px; left: 0; right: 0;
+  height: 80px;
+  background: var(--color-bg);
+  clip-path: polygon(0 100%, 100% 0, 100% 100%);
+  z-index: 2;
+}
+
+.parallax-inner {
+  position: relative;
+  z-index: 3;
+  max-width: 720px;
+  padding-inline: var(--container-pad);
+  padding-block: 3rem;
+}
+
+.parallax-inner .eyebrow {
+  color: rgba(246, 241, 239, 0.7);
+  border: 1px solid rgba(246, 241, 239, 0.2);
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--border-radius-full);
+  display: inline-block;
+  margin-bottom: var(--space-5);
+}
+
+.parallax-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 6vw, 4.5rem);
+  color: #F6F1EF;
+  letter-spacing: 0.04em;
+  line-height: 1;
+  margin-bottom: var(--space-5);
+  text-transform: uppercase;
+}
+
+.parallax-subtitle {
+  font-size: var(--fs-base);
+  color: rgba(246, 241, 239, 0.75);
+  max-width: 52ch;
+  margin: 0 auto var(--space-8);
+  line-height: 1.7;
+}
+
+/* En mobile: background-attachment fixed no funciona bien, usar scroll */
+@media (max-width: 767px) {
+  #parallax-banner {
+    background-attachment: scroll;
+    min-height: 55vh;
+  }
+}
+
+
+/* ════════════════════════════════════════════════════
+   SECTION: BRAND STRIP (ticker infinito)
+   ════════════════════════════════════════════════════ */
+
+#brand-strip {
+  background: var(--color-accent);
+  overflow: hidden;
+  padding-block: var(--space-4);
+  position: relative;
+  z-index: 2;
+}
+
+.brand-strip-track {
+  display: flex;
+  align-items: center;
+  gap: var(--space-10);
+  width: max-content;
+  animation: stripScroll 18s linear infinite;
+  will-change: transform;
+}
+
+.brand-strip-item {
+  font-family: var(--font-display);
+  font-size: var(--fs-lg);
+  color: rgba(246, 241, 239, 0.9);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+@keyframes stripScroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+#brand-strip:hover .brand-strip-track {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .brand-strip-track { animation: none; }
+}
+
+
+/* ════════════════════════════════════════════════════
+   SECTION: SPLIT FEATURE (imagen + texto)
+   ════════════════════════════════════════════════════ */
+
+#split-feature {
+  padding-block: var(--section-pad-y);
+  background: var(--color-bg-secondary);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-12);
+  align-items: center;
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--container-pad);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Corte diagonal superior */
+#split-feature::before {
+  content: '';
+  position: absolute;
+  top: -2px; left: 0; right: 0;
+  height: 60px;
+  background: var(--color-bg);
+  clip-path: polygon(0 0, 100% 0, 0 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Imagen col */
+.split-img-col {
+  position: relative;
+}
+
+.split-img-wrapper {
+  position: relative;
+  border-radius: 40% 60% 55% 45% / 45% 40% 60% 55%;  /* Forma blob orgánica */
+  overflow: hidden;
+  aspect-ratio: 4/5;
+  max-width: 480px;
+  margin-inline: auto;
+  box-shadow:
+    0 20px 60px rgba(143, 47, 74, 0.15),
+    0 8px 24px rgba(0,0,0,0.08);
+  transition: border-radius 0.8s ease;
+}
+
+.split-img-wrapper:hover {
+  border-radius: 55% 45% 40% 60% / 60% 55% 45% 40%;
+}
+
+.split-img-wrapper img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s ease;
+}
+
+.split-img-wrapper:hover img { transform: scale(1.04); }
+
+/* Elemento decorativo detrás de la imagen */
+.split-img-shape {
+  position: absolute;
+  inset: -12px;
+  background: linear-gradient(135deg, rgba(143, 47, 74, 0.12), rgba(143, 47, 74, 0.04));
+  border-radius: inherit;
+  z-index: -1;
+  transform: rotate(6deg);
+}
+
+/* Texto col */
+.split-text-col {
+  position: relative;
+  z-index: 2;
+}
+
+.split-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  line-height: 1.05;
+  color: var(--color-text);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: var(--space-8);
+  margin-top: var(--space-3);
+}
+
+.split-points {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  margin-bottom: var(--space-8);
+}
+
+.split-points li {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-size: var(--fs-base);
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+
+.split-point-icon {
+  color: var(--color-accent);
+  font-size: var(--fs-sm);
+  flex-shrink: 0;
+}
+
+/* Desktop: 2 columnas */
+@media (min-width: 768px) {
+  #split-feature {
+    grid-template-columns: 1fr 1fr;
+    padding-inline: var(--container-pad);
+    max-width: var(--container-max);
+  }
+}
+
+
+/* ════════════════════════════════════════════════════
+   PRODUCT BADGE (nuevo)
+   ════════════════════════════════════════════════════ */
+
+.product-badge {
+  position: absolute;
+  top: var(--space-3);
+  left: var(--space-3);
+  padding: 2px var(--space-3);
+  background: var(--color-accent);
+  color: #fff;
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border-radius: var(--border-radius-full);
+  z-index: 2;
+  line-height: 1.6;
+}

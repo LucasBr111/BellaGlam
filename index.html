@@ -143,102 +143,102 @@
     </div>
   </div>
 
-  <main id="main-content">
+<main id="main-content">
 
-    <!-- ================================ SECTION: HERO ================================ -->
-    <section id="hero" role="region" aria-label="Presentación de Bella Glam" aria-roledescription="Carrusel de imágenes">
-      <div class="hero-slider" aria-live="polite" aria-atomic="false">
-        <!-- Slides generados por JS desde hero.slides -->
+  <!-- HERO -->
+  <section id="hero" role="region" aria-label="Presentación de Bella Glam">
+    <div class="hero-slider" aria-live="polite" aria-atomic="false"></div>
+    <div class="hero-controls" aria-label="Controles del carrusel">
+      <div class="hero-arrows">
+        <button class="carousel-arrow hero-arrow-prev" aria-label="Slide anterior">&#8592;</button>
+        <button class="carousel-arrow hero-arrow-next" aria-label="Siguiente slide">&#8594;</button>
       </div>
+      <div class="hero-dots" role="tablist" aria-label="Slides"></div>
+    </div>
+  </section>
 
-    </section>
+  <!-- BRAND STRIP (ticker) -->
+  <div id="brand-strip" role="marquee" aria-label="Beneficios de Bella Glam" aria-live="off"></div>
 
 
-    <!-- ================================ SECTION: BRAND VALUES / ESENCIA ================================ -->
-    <section id="values" role="region" aria-labelledby="values-title">
-      <div class="container">
-        <header class="section-header" data-reveal="up">
-          <span class="eyebrow">Nuestra Filosofía</span>
-          <h2 id="values-title"><!-- Inyectado por JS --></h2>
-          <div class="accent-line" aria-hidden="true"></div>
-          <p id="values-subtitle"><!-- Inyectado por JS --></p>
-        </header>
-        <div class="values-grid">
-          <!-- Cards generadas por JS desde values.items -->
-        </div>
+  <!-- VALUES -->
+  <section id="values" role="region" aria-labelledby="values-title">
+    <div class="container">
+      <header class="section-header" data-reveal="up">
+        <span class="eyebrow">Nuestra Filosofía</span>
+        <h2 id="values-title"></h2>
+        <div class="accent-line" aria-hidden="true"></div>
+        <p id="values-subtitle"></p>
+      </header>
+      <div class="values-grid"></div>
+    </div>
+  </section>
+
+  <!-- PARALLAX BANNER -->
+  <section id="parallax-banner" role="region" aria-label="Filosofía de marca">
+    <div class="parallax-clip" aria-hidden="true"></div>
+  </section>
+  <!-- COLECCIÓN -->
+  <section id="coleccion" role="region" aria-labelledby="collection-title">
+    <div class="container">
+      <header class="section-header" data-reveal="up">
+        <span class="eyebrow">Productos Seleccionados</span>
+        <h2 id="collection-title"></h2>
+        <div class="accent-line" aria-hidden="true"></div>
+        <p id="collection-subtitle"></p>
+      </header>
+      <div id="collection-container"></div>
+    </div>
+  </section>
+
+  <!-- SPLIT FEATURE -->
+  <section id="split-feature" role="region" aria-labelledby="split-heading">
+    <!-- Inyectado por config-injector.js -->
+  </section>
+
+  <!-- GALERÍA -->
+  <section id="galeria" role="region" aria-labelledby="gallery-title">
+    <div class="container">
+      <header class="section-header" data-reveal="up">
+        <span class="eyebrow">Inspiración</span>
+        <h2 id="gallery-title"></h2>
+        <div class="accent-line" aria-hidden="true"></div>
+        <p id="gallery-subtitle"></p>
+      </header>
+    </div>
+    <div class="gallery-track-wrapper" aria-label="Galería de imágenes">
+      <div class="gallery-track" role="list"></div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" role="region" aria-labelledby="faq-title">
+    <div class="container">
+      <header class="section-header" data-reveal="up">
+        <span class="eyebrow">Resolvemos tus dudas</span>
+        <h2 id="faq-title"></h2>
+        <div class="accent-line" aria-hidden="true"></div>
+        <p id="faq-subtitle"></p>
+      </header>
+      <div class="faq-list" role="list"></div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section id="cta-final" role="region" aria-labelledby="cta-title">
+    <div class="container">
+      <div class="cta-final-inner" data-reveal="zoom">
+        <span class="eyebrow">Comenzá hoy</span>
+        <h2 id="cta-title"></h2>
+        <div class="accent-line" aria-hidden="true"></div>
+        <p id="cta-subtitle"></p>
+        <button id="cta-btn" class="btn btn-primary btn-lg"></button>
+        <p class="cta-social-proof" id="cta-social-proof"></p>
       </div>
-    </section>
+    </div>
+  </section>
 
-
-    <!-- ================================ SECTION: COLECCIÓN CON TABS ================================ -->
-    <section id="coleccion" role="region" aria-labelledby="collection-title">
-      <div class="container">
-        <header class="section-header" data-reveal="up">
-          <span class="eyebrow">Productos Seleccionados</span>
-          <h2 id="collection-title"><!-- Inyectado por JS --></h2>
-          <div class="accent-line" aria-hidden="true"></div>
-          <p id="collection-subtitle"><!-- Inyectado por JS --></p>
-        </header>
-        <!-- Tabs + Grid generados por JS desde portfolio -->
-        <div id="collection-container">
-        </div>
-      </div>
-    </section>
-
-
-    <!-- ================================ SECTION: GALERÍA ================================ -->
-    <section id="galeria" role="region" aria-labelledby="gallery-title">
-      <div class="container">
-        <header class="section-header" data-reveal="up">
-          <span class="eyebrow">Inspiración</span>
-          <h2 id="gallery-title"><!-- Inyectado por JS --></h2>
-          <div class="accent-line" aria-hidden="true"></div>
-          <p id="gallery-subtitle"><!-- Inyectado por JS --></p>
-        </header>
-      </div>
-      <div class="gallery-track-wrapper" aria-label="Galería de imágenes inspiracionales">
-        <div class="gallery-track" role="list">
-          <!-- Imágenes generadas por JS desde gallery.images -->
-        </div>
-      </div>
-    </section>
-
-
-    <!-- ================================ SECTION: FAQ ================================ -->
-    <section id="faq" role="region" aria-labelledby="faq-title">
-      <div class="container">
-        <header class="section-header" data-reveal="up">
-          <span class="eyebrow">Resolvemos tus dudas</span>
-          <h2 id="faq-title"><!-- Inyectado por JS --></h2>
-          <div class="accent-line" aria-hidden="true"></div>
-          <p id="faq-subtitle"><!-- Inyectado por JS --></p>
-        </header>
-        <div class="faq-list" role="list">
-          <!-- Acordeón generado por JS desde faq.items -->
-        </div>
-      </div>
-    </section>
-
-
-    <!-- ================================ SECTION: CTA FINAL ================================ -->
-    <section id="cta-final" role="region" aria-labelledby="cta-title">
-      <div class="container">
-        <div class="cta-final-inner" data-reveal="zoom">
-          <span class="eyebrow">Comenzá hoy</span>
-          <h2 id="cta-title"><!-- Inyectado por JS --></h2>
-          <div class="accent-line" aria-hidden="true"></div>
-          <p id="cta-subtitle"><!-- Inyectado por JS --></p>
-          <button id="cta-btn" class="btn btn-primary btn-lg">
-            <!-- Inyectado por JS -->
-          </button>
-          <p class="cta-social-proof" id="cta-social-proof">
-            <!-- Inyectado por JS -->
-          </p>
-        </div>
-      </div>
-    </section>
-
-  </main>
+</main>
 
 
   <!-- ================================ FOOTER ================================ -->
@@ -291,13 +291,16 @@
        2. Módulos JS      → dependen de SITE_CONFIG
        3. main.js         → entry point
   ═══════════════════════════════════════════════════ -->
-  <script src="config/site-config.js" defer></script>
-  <script src="assets/js/config-injector.js" defer></script>
-  <script src="assets/js/navbar.js"          defer></script>
-  <script src="assets/js/scroll-reveal.js"   defer></script>
-  <script src="assets/js/carousel.js"        defer></script>
-  <script src="assets/js/faq.js"             defer></script>
-  <script src="assets/js/main.js"            defer></script>
+  <script src="config/site-config.js"          defer></script>
+<script src="config/catalog.js"              defer></script>  <!-- ← catálogo externo -->
+<script src="assets/js/config-injector.js"   defer></script>
+<script src="assets/js/navbar.js"            defer></script>
+<script src="assets/js/scroll-reveal.js"     defer></script>
+<script src="assets/js/carousel.js"          defer></script>
+<script src="assets/js/faq.js"              defer></script>
+<script src="assets/js/counter.js"           defer></script>
+<script src="assets/js/whatsapp.js"          defer></script>
+<script src="assets/js/main.js"              defer></script>
 
   <!-- Footer WhatsApp link -->
   <script>

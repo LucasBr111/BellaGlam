@@ -1,22 +1,15 @@
 /**
- * BELLA GLAM — SITE CONFIG (Premium Structured Version)
- * ─────────────────────────────────────────────────────────────
- * Enfoque: Marca elegante, confianza inmediata y catálogo visual curado.
- * Identidad: Femenina sofisticada, limpia, moderna y consciente.
- * ─────────────────────────────────────────────────────────────
+ * BELLA GLAM — SITE CONFIG
+ * El catálogo de productos ahora vive en config/catalog.js
  */
 
 const SITE_CONFIG = {
 
-  /* ─────────────────────────────────────────────
-   * BRAND CORE
-   * ───────────────────────────────────────────── */
   brand: {
     name: "BELLA GLAM",
     tagline: "Sutil. Radiante. Tú.",
     description: "Una línea de cosméticos curada para mujeres que aman la elegancia natural y el brillo auténtico.",
     city: "Ciudad del Este",
-    neighborhood: "Centro",
     country: "Paraguay",
     founded: "2024",
     whatsapp: "595986458117",
@@ -24,89 +17,99 @@ const SITE_CONFIG = {
     address: "Tienda Online — Envíos a todo Paraguay",
     social: {
       instagram: "https://instagram.com/bellaglam.py",
-      tiktok: "https://tiktok.com/@bellaglam.py",
-      facebook: "https://facebook.com/bellaglam.py"
+      tiktok:    "https://tiktok.com/@bellaglam.py",
+      facebook:  "https://facebook.com/bellaglam.py"
     }
   },
 
-  /* ─────────────────────────────────────────────
-   * SEO & META
-   * ───────────────────────────────────────────── */
   seo: {
     title: "Bella Glam | Cosméticos elegantes en Paraguay",
-    description: "Bella Glam es una línea de cosméticos curada en Ciudad del Este que combina elegancia, calidad y belleza consciente. Descubrí productos pensados para resaltar tu luz natural.",
+    description: "Bella Glam es una línea de cosméticos curada en Ciudad del Este que combina elegancia, calidad y belleza consciente.",
     keywords: "maquillaje paraguay, cosméticos premium, bella glam, maquillaje elegante, labiales larga duración paraguay",
-    ogImage: "assets/img/og-bella.jpg",
-    structuredData: {
-      type: "CosmeticsBrand",
-      availability: "OnlineStore",
-      country: "Paraguay"
-    }
+    ogImage: "assets/img/og-bella.jpg"
   },
 
-  /* ─────────────────────────────────────────────
-   * VISUAL THEME (Minimal Elegance)
-   * ───────────────────────────────────────────── */
   theme: {
-    colorBg: "#F6F1EF",
-    colorBgSecondary: "#EAD8D5",
-    colorText: "#2F2A28",
-    colorTextMuted: "#9B8E8A",
-    colorAccent: "#8F2F4A",
-    colorAccentHover: "#73243A",
-    colorCard: "#FFFFFF",
-    colorBorder: "rgba(155, 142, 138, 0.25)",
-    fontDisplay: "'Cormorant Garamond', serif",
-    fontBody: "'Montserrat', sans-serif",
-    borderRadius: "18px",
-    shadowSoft: "0 10px 30px rgba(0,0,0,0.05)",
-    shadowHover: "0 15px 40px rgba(0,0,0,0.08)",
-    transitionSpeed: "0.4s",
-    containerWidth: "1200px"
+    colorBg:           "#F6F1EF",
+    colorBgSecondary:  "#EAD8D5",
+    colorText:         "#2F2A28",
+    colorTextMuted:    "#9B8E8A",
+    colorAccent:       "#8F2F4A",
+    colorAccentHover:  "#73243A",
+    colorCard:         "#FFFFFF",
+    colorBorder:       "rgba(155, 142, 138, 0.25)",
+    fontDisplay:       "'Cormorant Garamond', serif",
+    fontBody:          "'Montserrat', sans-serif",
+    borderRadius:      "18px",
+    transitionSpeed:   "0.4s"
   },
 
-  /* ─────────────────────────────────────────────
-   * NAVIGATION
-   * ───────────────────────────────────────────── */
   navbar: {
     transparentOnTop: true,
-    blurOnScroll: true,
     links: [
-      { label: "Colección", href: "#coleccion" },
-      { label: "Esencia", href: "#values" },
-      { label: "Galería", href: "#galeria" },
-      { label: "Preguntas", href: "#faq" },
-      { label: "Contacto", href: "#cta-final" }
+      { label: "Colección",  href: "#coleccion" },
+      { label: "Esencia",    href: "#values" },
+      { label: "Galería",    href: "#galeria" },
+      { label: "Preguntas",  href: "#faq" },
+      { label: "Contacto",   href: "#cta-final" }
     ],
-    ctaLabel: "Ver más",
+    ctaLabel: "Ver más"
   },
 
-  /* ─────────────────────────────────────────────
-   * HERO SECTION
-   * ───────────────────────────────────────────── */
   hero: {
-    layout: "fullscreen-slider",
     autoplayInterval: 6500,
     slides: [
       {
-        image: "assets/img/hero-bella-1.png",
-        imageAlt: "Modelo usando cosméticos Bella Glam",
-        eyebrow: "Tu ritual de elegancia diaria",
-        title: "La belleza no se aplica. Se despierta.",
-        subtitle: "Descubrí una colección pensada para mujeres que aman la naturalidad sofisticada y el brillo auténtico.",
-        primaryCTA: { label: "Ver Colección", href: "#coleccion" },
+        image:        "assets/img/hero-bella-1.png",
+        imageAlt:     "Modelo usando cosméticos Bella Glam",
+        eyebrow:      "Tu ritual de elegancia diaria",
+        title:        "La belleza no se aplica. Se despierta.",
+        subtitle:     "Descubrí una colección pensada para mujeres que aman la naturalidad sofisticada y el brillo auténtico.",
+        primaryCTA:   { label: "Ver Colección",  href: "#coleccion" },
         secondaryCTA: { label: "Nuestra Esencia", href: "#values" },
-        microcopy: "Cruelty Free • Pago Seguro • Envíos a todo Paraguay"
+        microcopy:    "Cruelty Free • Pago Seguro • Envíos a todo Paraguay"
       }
     ]
   },
 
-  /* ─────────────────────────────────────────────
-   * BRAND VALUES (Sin testimonios)
-   * ───────────────────────────────────────────── */
+  /* ── PARALLAX BANNER (nueva sección) ── */
+  parallaxBanner: {
+    image:    "assets/img/hero-bella-1.png",
+    eyebrow:  "Belleza Consciente",
+    title:    "Cada producto cuenta una historia.",
+    subtitle: "Seleccionamos con cuidado cada fórmula para que tu ritual diario sea un momento de elegancia pura.",
+    cta: { label: "Conocé la colección", href: "#coleccion" }
+  },
+
+  /* ── SPLIT FEATURE (nueva sección) ── */
+  splitFeature: {
+    eyebrow: "Compromiso Real",
+    title:   "Hecho para vos,\npensado para durar.",
+    points: [
+      { icon: "✦", text: "Fórmulas libres de crueldad animal" },
+      { icon: "✦", text: "Pigmentación profesional al alcance de todas" },
+      { icon: "✦", text: "Envíos rápidos a todo Paraguay" },
+      { icon: "✦", text: "Asesoramiento personalizado por WhatsApp" }
+    ],
+    image:    "assets/img/gallery-1.jfif",
+    imageAlt: "Detalle de producto Bella Glam"
+  },
+
+  /* ── BRAND STRIP (nueva sección) ── */
+  brandStrip: {
+    items: [
+      "Cruelty Free",
+      "Pago Seguro",
+      "Envíos Express",
+      "Asesoría Personalizada",
+      "Calidad Garantizada",
+      "Hecho con Amor"
+    ]
+  },
+
   values: {
-    title: "Nuestra Esencia",
-    subtitle: "En Bella Glam, seleccionamos lo mejor del maquillaje global para ofrecerte una experiencia de belleza elegante, consciente y diseñada para resaltar tu autenticidad.",
+    title:    "Nuestra Esencia",
+    subtitle: "Seleccionamos lo mejor del maquillaje global para ofrecerte una experiencia de belleza elegante, consciente y diseñada para resaltar tu autenticidad.",
     items: [
       {
         icon: "sparkle",
@@ -121,133 +124,53 @@ const SITE_CONFIG = {
       {
         icon: "shield",
         title: "Cercanía y Garantía",
-        description: "Somos una tienda real para personas reales. Te acompañamos en tu compra con asesoría personalizada, envíos seguros y total transparencia."
+        description: "Somos una tienda real para personas reales. Te acompañamos con asesoría personalizada, envíos seguros y total transparencia."
       }
     ]
   },
 
-  /* ─────────────────────────────────────────────
-   * PRODUCT COLLECTION
-   * ───────────────────────────────────────────── */
-  portfolio: {
-    id: "coleccion",
-    title: "La Colección",
-    subtitle: "Productos seleccionados por su calidad, textura y acabado impecable.",
-    layout: "grid-filtered",
-    categories: [
-      {
-        id: "piel",
-        name: "Piel",
-        description: "Texturas ligeras, acabado natural.",
-        products: [
-          { name: "Base Glow Satín", price: "Gs. 85.000", img: "assets/img/base-1.jpg" },
-          { name: "Corrector Velvet", price: "Gs. 45.000", img: "assets/img/base-2.jfif" },
-          { name: "Primer Luminous", price: "Gs. 50.000", img: "assets/img/base-3.jfif" },
-          { name: "BB Cream Radiance", price: "Gs. 70.000", img: "assets/img/base-4.jfif" }
-        ]
-      },
-      {
-        id: "acabados",
-        name: "Acabados",
-        description: "Sellado perfecto y sofisticado.",
-        products: [
-          { name: "Polvo Translúcido HD", price: "Gs. 60.000", img: "assets/img/polvo-1.jpg" },
-          { name: "Bronzer Terracotta", price: "Gs. 75.000", img: "assets/img/polvo-2.jfif" },
-          { name: "Iluminador Champagne Glow", price: "Gs. 80.000", img: "assets/img/polvo-3.jfif" },
-          { name: "Blush Rosé Petal", price: "Gs. 65.000", img: "assets/img/polvo-4.jfif" },
-          { name: "Setting Spray Fix & Glow", price: "Gs. 55.000", img: "assets/img/polvo-5.jfif" },
-          { name: "Primer Luminous", price: "Gs. 50.000", img: "assets/img/polvo-6.jfif" }
-        ]
-      },
-      {
-        id: "labios",
-        name: "Labios",
-        description: "Tonos que elevan tu estilo.",
-        products: [
-          { name: "Matte Berry Bliss", price: "Gs. 40.000", img: "assets/img/p-labial-1.jpg" },
-          { name: "Gloss Rose Quartz", price: "Gs. 35.000", img: "assets/img/p-labial-2.jpg" }
-        ]
-      }
-    ]
-  },
-
-  /* ─────────────────────────────────────────────
-   * MINI GALERÍA VISUAL (Reemplaza testimonios)
-   * ───────────────────────────────────────────── */
   gallery: {
-    id: "galeria",
-    title: "Momentos Bella Glam",
+    title:    "Momentos Bella Glam",
     subtitle: "Inspiración real para tu ritual diario.",
-    layout: "carousel-centered",
     autoplay: true,
-    interval: 4000,
     images: [
       { src: "assets/img/gallery-1.jfif", alt: "Maquillaje natural elegante" },
       { src: "assets/img/gallery-2.jfif", alt: "Detalle de labial tono berry" },
       { src: "assets/img/gallery-4.jfif", alt: "Texturas de base y polvo" },
       { src: "assets/img/gallery-5.jfif", alt: "Look de maquillaje para el día" },
       { src: "assets/img/gallery-6.jfif", alt: "Look de maquillaje para la noche" }
-
     ]
   },
 
-  /* ─────────────────────────────────────────────
-   * FAQ
-   * ───────────────────────────────────────────── */
   faq: {
-    id: "faq",
-    title: "Preguntas Frecuentes",
+    title:    "Preguntas Frecuentes",
     subtitle: "Queremos que tu experiencia sea clara y segura.",
     items: [
-      {
-        question: "¿Cómo elijo mi tono ideal?",
-        answer: "Ofrecemos asesoramiento personalizado vía WhatsApp para ayudarte a encontrar tu match perfecto."
-      },
-      {
-        question: "¿Realizan envíos a todo Paraguay?",
-        answer: "Sí. Trabajamos con transportadoras confiables para asegurar entregas rápidas y seguras."
-      },
-      {
-        question: "¿Cuánto tarda en llegar mi pedido?",
-        answer: "Los envíos dentro de Ciudad del Este suelen ser en el día. Para el resto de Paraguay, el tiempo estimado es de 24 a 48 horas hábiles, dependiendo de tu ubicación."
-      },
-      {
-        question: "¿Puedo cambiar un producto si me llegó dañado?",
-        answer: "¡Claro que sí! Si algún producto llega con fallas de origen o daños por el transporte, tienes un plazo de 24hs tras recibirlo para contactarnos y gestionaremos el cambio sin costo adicional."
-      },
-      {
-        question: "¿Qué métodos de pago aceptan?",
-        answer: "Transferencias bancarias y pagos con tarjeta mediante plataforma segura."
-      },
-      {
-        question: "¿Tienen tienda física para probar los productos?",
-        answer: "Por el momento somos una tienda 100% online, lo que nos permite mantener precios más competitivos. Sin embargo, enviamos fotos y videos reales de los productos por WhatsApp para que los veas en detalle antes de comprar."
-      },
+      { question: "¿Cómo elijo mi tono ideal?",                    answer: "Ofrecemos asesoramiento personalizado vía WhatsApp para ayudarte a encontrar tu match perfecto." },
+      { question: "¿Realizan envíos a todo Paraguay?",             answer: "Sí. Trabajamos con transportadoras confiables para asegurar entregas rápidas y seguras." },
+      { question: "¿Cuánto tarda en llegar mi pedido?",            answer: "Dentro de Ciudad del Este suele ser en el día. Para el resto del país, 24 a 48 horas hábiles." },
+      { question: "¿Puedo cambiar un producto dañado?",            answer: "Tenés 24hs tras recibirlo para contactarnos y gestionamos el cambio sin costo adicional." },
+      { question: "¿Qué métodos de pago aceptan?",                 answer: "Transferencias bancarias y pagos con tarjeta mediante plataforma segura." },
+      { question: "¿Tienen tienda física?",                        answer: "Somos 100% online. Enviamos fotos y videos reales de cada producto por WhatsApp antes de comprar." }
     ]
   },
 
-  /* ─────────────────────────────────────────────
-   * FINAL CTA
-   * ───────────────────────────────────────────── */
   cta: {
-    title: "Haz del brillo tu firma.",
-    subtitle: "Empieza tu experiencia Bella Glam hoy.",
+    title:       "Haz del brillo tu firma.",
+    subtitle:    "Empieza tu experiencia Bella Glam hoy.",
     buttonLabel: "Hablar con una asesora",
-    microTrust: "Respuesta rápida • Atención personalizada • Compra protegida"
+    microTrust:  "Respuesta rápida • Atención personalizada • Compra protegida"
   },
 
-  /* ─────────────────────────────────────────────
-   * FOOTER
-   * ───────────────────────────────────────────── */
   footer: {
     tagline: "Sutil. Radiante. Tú.",
     links: [
       { label: "Colección", href: "#coleccion" },
-      { label: "Esencia", href: "#values" },
-      { label: "Galería", href: "#galeria" },
+      { label: "Esencia",   href: "#values" },
+      { label: "Galería",   href: "#galeria" },
       { label: "Preguntas", href: "#faq" }
     ],
-    legal: "© 2026 Bella Glam — Ciudad del Este, Paraguay. Todos los derechos reservados."
+    legal: "Todos los derechos reservados."
   }
 
 };
